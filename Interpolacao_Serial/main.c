@@ -1,6 +1,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <time.h>
+#include <omp.h>
 
 double* xValuesGenerator(long long int size)
 {
@@ -54,7 +55,7 @@ void main(){
     double start_time, end_time;
     start_time = omp_get_wtime();
 
-    long long int size = 1000;
+    long long int size = 10000;
 
     double* xValues = xValuesGenerator(size);
     double* yValues = yValuesGenerator(size);
